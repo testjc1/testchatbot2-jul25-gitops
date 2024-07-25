@@ -1,0 +1,6 @@
+apiVersion: "pipelinesascode.tekton.dev/v1alpha1"
+kind: Repository
+metadata:
+  name: testchatbot2-jul25-repository
+spec:
+  url: https://github.com/testjc1/testchatbot2-jul25

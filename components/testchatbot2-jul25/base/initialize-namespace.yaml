@@ -1,0 +1,19 @@
+apiVersion: tekton.dev/v1
+kind: PipelineRun
+metadata:
+  name: testchatbot2-jul25-rhtap-dev-namespace-setup
+  namespace: rhtap
+spec:
+  pipelineSpec:
+    tasks:
+      - name: configure-namespace
+        taskRef:
+          kind: Task
+          params:
+            - name: kind
+              value: task
+            - name: name
+              value: rhtap-dev-namespace-setup
+            - name: namespace
+              value: rhtap
+          resolver: cluster
